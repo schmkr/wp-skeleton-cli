@@ -17,7 +17,7 @@ ADMIN_PASSWORD=`dd if=/dev/random bs=16 count=1 2>/dev/null | base64 | sed 's/=/
 echo "The password for $ADMIN_NAME ($ADMIN_EMAIL) will be: $ADMIN_PASSWORD";
 
 # Download Wordpress
-# wp core download
+wp core download
 
 # Do the installation with the given options
 wp core install \
