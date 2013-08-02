@@ -1,0 +1,2 @@
+path: wp
+require: wp-cli-config.php
