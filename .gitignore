@@ -1,5 +1,7 @@
+memcached.php
 wp-cli-config.php
 wp/*
 shared
+content/plugins
 content/uploads
 content/cache
