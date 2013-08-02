@@ -71,7 +71,7 @@ if(WP_APPLICATION_ENV === 'development') {
 define('DONOTVERIFY_WP_LOADER', true);
 
 // Yeah, we want cache!
-define('WP_CACHE', true);
+define('WP_CACHE', false);
 
 // Don't concatenate javascripts
 define('CONCATENATE_SCRIPTS', false);
