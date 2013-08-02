@@ -37,7 +37,6 @@ wp option set home "http://$URL"
 wp option set timezone_string "Europe/Amsterdam"
 wp option set date_format "d-m-Y"
 wp option set time_format "H:i"
-wp option set start_of_week 1
 
 # I don't like those smileys Wordpress uses, disabled them
 wp option set use_smilies 0
