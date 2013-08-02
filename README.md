@@ -12,5 +12,5 @@ The idea for this project came from [Mark Jaquith's Wordpress Skeleton](https://
 
 For me this project now works ("on my machine"), but I have already some ideas for improvements:
 
-- [] Add a getting started to README.md
-- [] Include WP-CLI as a phar in a bin dir
+- [ ] Add a getting started to README.md
+- [ ] Include WP-CLI as a phar in a bin dir
