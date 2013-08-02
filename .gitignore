@@ -1,2 +1,5 @@
 wp-cli-config.php
 wp/*
+shared/*
+content/uploads/*
+content/cache/*
