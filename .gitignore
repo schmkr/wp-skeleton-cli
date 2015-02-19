@@ -2,6 +2,7 @@ memcached.php
 wp-cli-config.php
 wp/*
 shared
+config/*.php
 content/plugins
 content/uploads
 content/themes
