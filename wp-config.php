@@ -7,8 +7,11 @@ define( 'DB_PASSWORD', (getenv('WP_DB_PASS') ? getenv('WP_DB_PASS') : '') ); //l
 define( 'DB_HOST', (getenv('WP_DB_HOST') ? getenv('WP_DB_HOST') : 'localhost') );
 define( 'DB_PREFIX', (getenv('WP_DB_PREFIX') ? getenv('WP_DB_PREFIX') : 'wp_') );
 
-if(file_exists(dirname(__FILE__).'/aws-credentials.php')) {
-    require dirname(__FILE__).'/aws-credentials.php';
+if(file_exists(dirname(__FILE__).'/config/wp-extras.php')) {
+    //Use this wp-extras.php file in the config dir to configure
+    //database credentials, salts and other sensitive data you don't want
+    //in your git history (so, yes, the above lines will be removed
+    require dirname(__FILE__).'/config/wp-extras.php';
 }
 
 // ========================
@@ -22,19 +25,6 @@ define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
 // ================================================
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
-
-// ==============================================================
-// Salts, for security
-// Grab these from: https://api.wordpress.org/secret-key/1.1/salt
-// ==============================================================
-define('AUTH_KEY',         'YFZf?|el(vOARG,@*XjT6|DV`JkTZ4ZmN[LQJpl_;Gmoe,7VO2,Mn#({0}&(+@CZ');
-define('SECURE_AUTH_KEY',  'IFY[vEpH?B`#PTDO>WT oEJl|w(?HYl8:DN>Ul2}!|18KW;~NiZr@~zO:Y2bo,Ym');
-define('LOGGED_IN_KEY',    '7pe3<s;zOe#xo]0(+<+pYMs/(pAy,;t8?$VFek,P<2iU1+Be-Q.=4AF7UflOgZyI');
-define('NONCE_KEY',        '&bL+#B}|smmLBbF]hI)D28&}]K]b0vi--}n8yZYM+$|+P3`!3G@t#*>Nb~5fF~}o');
-define('AUTH_SALT',        ')ntM@qNO$K)#7nc>_{#F5K!0dB~(xP*F66#+Q-0JV+o%TXYp{~}u(vQvnk.XkzaN');
-define('SECURE_AUTH_SALT', 'a4pF~Ppcuwu=)|_m=%]|2><+6{zNpq5bgy/|PgP6`2~uC49T*=(S-x_9tHZTdYmK');
-define('LOGGED_IN_SALT',   'rY`3l>?[&8Gv)mU7bH@4b]{,N-!u9[Umo.*_*t@71=t(W<P7{86^dN!Ww_;G0+ r');
-define('NONCE_SALT',       'Gi6|.^>ANDrJ?_$H0~R4+(GYSchl-k2kj>m/3L(++NXU[O 7csgA%S./z-n[dHT3');
 
 // ==============================================================
 // Table prefix
