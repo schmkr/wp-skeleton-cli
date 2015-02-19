@@ -7,6 +7,10 @@ define( 'DB_PASSWORD', (getenv('WP_DB_PASS') ? getenv('WP_DB_PASS') : '') ); //l
 define( 'DB_HOST', (getenv('WP_DB_HOST') ? getenv('WP_DB_HOST') : 'localhost') );
 define( 'DB_PREFIX', (getenv('WP_DB_PREFIX') ? getenv('WP_DB_PREFIX') : 'wp_') );
 
+if(file_exists(dirname(__FILE__).'/aws-credentials.php')) {
+    require dirname(__FILE__).'/aws-credentials.php';
+}
+
 // ========================
 // Custom Content Directory
 // ========================
